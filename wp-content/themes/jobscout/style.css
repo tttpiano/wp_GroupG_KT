@@ -3064,7 +3064,7 @@ section.client-section {
 SITE FOOTER SECTION
 ==========================*/
 .footer-t {
-  background: #000;
+  background: rgba(242, 242, 242, 0.95);
   padding-top: 60px;
 }
 
@@ -6784,7 +6784,9 @@ RESPONSIVE STYLESHEET
   .footer-b .privacy-block+.copyright {
     width: 100%;
     text-align: center;
+
   }
+
 
   /*========================
 	ARCHIVE BIO SECTION
@@ -8158,4 +8160,97 @@ RESPONSIVE STYLESHEET
 
 .wp-block-social-links {
   flex-wrap: wrap !important;
+}
+
+
+
+
+.copyright{
+  font-size: 13px;
+}
+.attachment-full.size-full {
+  color: #ffffff;
+  font-size: 20px;
+  width: 100px;
+}
+
+#raratheme_client_logo_widget-2.widget.widget_raratheme_client_logo_widget {
+  text-align: center;
+}
+
+.site-footer .widget_text .textwidget {
+  color: #000000;
+}
+
+.col {
+  text-align: center;
+}
+
+.footer-t {
+  background-color: #f2f2f2;
+}
+
+.widget_raratheme_client_logo_widget .image-holder:not(.black-wihte) a {
+  opacity: 1 !important;
+}
+
+.widget_raratheme_client_logo_widget .raratheme-client-logo-inner-holder {
+  text-align: center;
+  display: inline-flex;
+}
+
+.site-footer .widget_raratheme_client_logo_widget .image-holder {
+  width: 40px;
+  margin-right: 21px;
+}
+
+.site-footer .widget_raratheme_client_logo_widget .image-holder img {
+  border-radius: 75px;
+  max-width: 110%;
+}
+
+#menu-menu-footer.menu {
+  transform: translateX(14px);
+  display: inline-flex;
+  color: #000000;
+}
+
+.site-footer .widget ul li a {
+  color: #212121;
+  margin-right: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.widget {
+  margin: 0 0 30px 0;
+}
+
+.site-footer .widget ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.raratheme-client-logo-holder {
+  transform: translateY(-5px);
+}
+
+.copyright-text {
+  font-size: 13px;
+}
+
+.site-footer .widget ul li a {
+  font-size: 17px;
+}
+
+
+.rightsidebar #primary {
+  width: 100%;
+}
+#secondary {
+  display:none;
 }
