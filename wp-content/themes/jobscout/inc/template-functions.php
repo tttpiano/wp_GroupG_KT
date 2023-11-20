@@ -101,7 +101,7 @@ function jobscout_header(){
     <header id="masthead" class="site-header header-one" itemscope itemtype="https://schema.org/WPHeader">
         <?php if( has_nav_menu( 'secondary' ) || current_user_can( 'manage_options' ) ) jobscout_secondary_navigation(); ?>
         <div class="header-main">
-            <div class="container">
+            <div class="container" style="max-width: 1320px !important;">
                 <?php 
                     jobscout_site_branding( false );
                     echo '<div class="menu-wrap">';
@@ -199,7 +199,7 @@ function jobscout_content_start(){
                 }
             } 
         ?>
-        <div class="container">
+        <div class="container-fluid">
         <?php 
     }
 }
