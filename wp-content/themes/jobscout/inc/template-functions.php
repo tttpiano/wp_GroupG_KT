@@ -500,7 +500,7 @@ if( ! function_exists( 'jobscout_footer_top' ) ) :
  * Footer Top
 */
 function jobscout_footer_top(){    
-    $footer_sidebars = array( 'footer-one', 'footer-two', 'footer-three', 'footer-four' );
+    $footer_sidebars = array( 'footer-one');
     $active_sidebars = array();
     $sidebar_count   = 0;
     
@@ -569,7 +569,7 @@ if( ! function_exists( 'jobscout_page_end' ) ) :
  * Page End
 */
 function jobscout_page_end(){ ?>
-    </div><!-- #acc-content -->
+    </html><!-- #acc-content -->
     </div><!-- #page -->
     <?php
 }
