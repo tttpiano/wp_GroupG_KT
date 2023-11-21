@@ -50,7 +50,7 @@ if ($ed_blog && ($blog_heading || $sub_title || $qry->have_posts())) { ?>
                 // Sử dụng WP_Query để truy vấn các bài viết
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 6
+                    'posts_per_page' => 4
                 );
 
                 $query = new WP_Query($args);
