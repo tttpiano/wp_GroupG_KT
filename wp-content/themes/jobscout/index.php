@@ -15,20 +15,34 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		
-        <?php 
+
+        <?php
         /**
          * Before Posts hook
         */
         do_action( 'jobscout_before_posts_content' );
         ?>
-        
+
         <main id="main" class="site-main">
 
 		<?php
 		if ( have_posts() ) :
+            ?>
+            <div class="mt-4" style="position: relative; display: inline-block; margin-top:31px !important">
+                <img src="https://thetokyolife.jp/wp-content/uploads/2020/08/Header-Image-Featured-Category.png" alt="PDS Image">
+                <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: white; font-weight: bold;">PDS NEWS</span>
+            </div>
 
-			/* Start the Loop */
+            <h2 class="text-center mt-4">NEWEST BLOG ENTRIES</h2>
+            <div class="container">
+                <div class="row">
+                    <?php
+                    $args = array(
+                        'posts_per_page' => 8, // Số lượng bài viết muốn hiển thị
+                    );
+
+                    $query = new WP_Query($args);
+                    /* Start the Loop */
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -40,6 +54,13 @@ get_header(); ?>
 
 			endwhile;
 
+                    // Reset post data
+                    wp_reset_postdata();
+                    ?>
+                </div>
+            </div>
+        <?php
+
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -47,7 +68,7 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-        
+
         <?php
         /**
          * After Posts hook
@@ -55,7 +76,7 @@ get_header(); ?>
         */
         do_action( 'jobscout_after_posts_content' );
         ?>
-        
+
 	</div><!-- #primary -->
 
 <?php

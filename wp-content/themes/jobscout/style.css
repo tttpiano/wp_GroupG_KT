@@ -804,6 +804,7 @@ a:hover {
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
+  display:none;
 }
 
 .comment-navigation .nav-next,
@@ -1007,7 +1008,7 @@ object {
 
   width: 300px;
   display: inline-block;
-  transform: translate(-2px,-3px);
+  transform: translateY(-3px);
 }
 
 /*--------------------------------------------------------------
@@ -1528,7 +1529,7 @@ PAGINATION
 }
 
 .posts-navigation .nav-links a {
-  display: inline-block;
+  display: none !important;
   vertical-align: middle;
   border: 2px solid #f0f0f0;
   border-radius: 40px;
@@ -5927,7 +5928,7 @@ RESPONSIVE STYLESHEET
 
   .site-branding.logo-text .site-title-wrap {
     width: calc(100% - 50px);
-    padding-left: 15px;
+    /*padding-left: 15px;*/
   }
 
   .header-main .menu-wrap {
