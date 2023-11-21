@@ -199,7 +199,7 @@ function jobscout_content_start(){
                 }
             } 
         ?>
-        <div class="container-fluid">
+        <div >
         <?php 
     }
 }

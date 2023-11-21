@@ -1008,7 +1008,7 @@ object {
 
   width: 300px;
   display: inline-block;
-  transform: translate(-2px,-3px);
+  transform: translateY(-3px);
 }
 
 /*--------------------------------------------------------------
@@ -5928,7 +5928,7 @@ RESPONSIVE STYLESHEET
 
   .site-branding.logo-text .site-title-wrap {
     width: calc(100% - 50px);
-    padding-left: 15px;
+    /*padding-left: 15px;*/
   }
 
   .header-main .menu-wrap {
