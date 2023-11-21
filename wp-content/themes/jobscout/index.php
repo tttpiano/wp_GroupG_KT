@@ -38,9 +38,9 @@ get_header(); ?>
                 <div class="row">
                     <?php
                     $args = array(
+                        'post_type' => 'post',
                         'posts_per_page' => 8, // Số lượng bài viết muốn hiển thị
                     );
-
                     $query = new WP_Query($args);
                     /* Start the Loop */
 			while ( have_posts() ) : the_post();
