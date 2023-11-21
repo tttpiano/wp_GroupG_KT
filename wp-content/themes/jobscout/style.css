@@ -1122,8 +1122,8 @@ body.custom-background .site {
 
 a.btn {
   display: inline-block;
-  background: #2ace5e;
-  border: 1px solid #2ace5e;
+  background: rgb(246, 53, 28);
+  border: 1px solid rgb(246, 53, 28);
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -1133,7 +1133,7 @@ a.btn {
 a.btn:hover,
 a.btn:focus {
   background: none;
-  color: #2ace5e;
+  color: rgb(246, 53, 28);
 }
 
 a.btn:focus {
