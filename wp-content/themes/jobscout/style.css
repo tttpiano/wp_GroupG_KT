@@ -1005,9 +1005,10 @@ object {
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
+
   width: 300px;
   display: inline-block;
-  transform: translateY(-3px);
+  transform: translate(-2px,-3px);
 }
 
 /*--------------------------------------------------------------
@@ -1126,9 +1127,10 @@ a.btn {
   background: rgb(246, 53, 28);
   border: 1px solid rgb(246, 53, 28);
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   padding: 10px 18px;
+  border-radius: 0;
 }
 
 a.btn:hover,
@@ -1851,7 +1853,8 @@ COMMENTS AREA
 SIDEBARS
 =========================*/
 .site-content {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+  transform: translateY(-30px);
   margin-bottom: 50px;
 }
 
@@ -2176,7 +2179,7 @@ body.home:not(.banner-enabled) .site-header {
 .site-branding .site-title a {
   color: #000000;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .site-branding .site-description {
@@ -8174,7 +8177,7 @@ RESPONSIVE STYLESHEET
   flex-wrap: wrap !important;
 }
 
-
+/*footer*/
 
 
 .copyright{
@@ -8265,4 +8268,27 @@ a {
 }
 #secondary {
   display:none;
+}
+/*enty header*/
+.entry-header{
+  display: none;
+}
+
+/*about*/
+.alignright {
+  margin-right: 20px !important;
+}
+
+@media screen and (max-width: 600px) {
+  #menu-menu-footer.menu {
+    transform: translateX(14px);
+    display: block;
+    color: #000000;
+  }
+}
+@media screen and (max-width: 300px) {
+  .custom-logo-link {
+    width: 150px;
+
+  }
 }
