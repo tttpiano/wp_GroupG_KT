@@ -1122,8 +1122,8 @@ body.custom-background .site {
 
 a.btn {
   display: inline-block;
-  background: #2ace5e;
-  border: 1px solid #2ace5e;
+  background: rgb(246, 53, 28);
+  border: 1px solid rgb(246, 53, 28);
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -1133,7 +1133,7 @@ a.btn {
 a.btn:hover,
 a.btn:focus {
   background: none;
-  color: #2ace5e;
+  color: rgb(246, 53, 28);
 }
 
 a.btn:focus {
@@ -2129,6 +2129,7 @@ HEADER MAIN SECTION
 }
 
 .header-main {
+  background-color: white !important;
   padding: 10px 0;
 }
 
@@ -2211,6 +2212,7 @@ body.home:not(.banner-enabled) .site-header {
 }
 
 .main-navigation ul li a {
+  transform: translateX(-6px);
   display: inline-block;
   vertical-align: middle;
   padding: 10px;
