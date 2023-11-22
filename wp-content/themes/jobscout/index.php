@@ -25,47 +25,39 @@ get_header(); ?>
 
         <main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
-            ?>
-            <div class="mt-4" style="position: relative; display: inline-block; margin-top:31px !important">
-                <img src="https://thetokyolife.jp/wp-content/uploads/2020/08/Header-Image-Featured-Category.png" alt="PDS Image">
-                <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: white; font-weight: bold;">PDS NEWS</span>
-            </div>
+            <?php
+            $args = array(
+                'post_type'      => 'post',   // Loại bài viết bạn muốn lấy
+                'posts_per_page' => 8,        // Số lượng bài viết muốn hiển thị
+            );
 
-            <h2 class="text-center mt-4">NEWEST BLOG ENTRIES</h2>
-            <div class="container">
-                <div class="row">
-                    <?php
-                    $args = array(
-                        'posts_per_page' => 8, // Số lượng bài viết muốn hiển thị
-                    );
+            $query = new WP_Query($args);
 
-                    $query = new WP_Query($args);
-                    /* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-                    // Reset post data
-                    wp_reset_postdata();
-                    ?>
+            if ($query->have_posts()) :
+                ?>
+                <div class="mt-4" style="position: relative; display: inline-block; margin-top:31px !important">
+                    <img src="https://thetokyolife.jp/wp-content/uploads/2020/08/Header-Image-Featured-Category.png" alt="PDS Image">
+                    <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; color: white; font-weight: bold;">PDS NEWS</span>
                 </div>
-            </div>
-        <?php
 
-		else :
+                <h2 class="text-center mt-4">NEWEST BLOG ENTRIES</h2>
+                <div class="container">
+                    <div class="row">
+                        <?php
+                        /* Start the Loop */
+                        while ($query->have_posts()) : $query->the_post();
+                            get_template_part('template-parts/content', get_post_format());
+                        endwhile;
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+                        // Reset post data
+                        wp_reset_postdata();
+                        ?>
+                    </div>
+                </div>
+            <?php else :
+                get_template_part('template-parts/content', 'none');
+            endif;
+            ?>
 
 		</main><!-- #main -->
 
